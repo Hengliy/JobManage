@@ -1,0 +1,233 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Job.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Job.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Job"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Job 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_JOB_DIALOG DIALOGEX 0, 0, 685, 361
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "作业调度模拟程序(3106006899)"
+FONT 11, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "先来先服务(FCFS)",IDC_FCFS,"Button",BS_AUTORADIOBUTTON | WS_GROUP,144,13,78,10
+    CONTROL         "最短作业优先(SJF)",IDC_SJF,"Button",BS_AUTORADIOBUTTON,226,13,81,10
+    CONTROL         "响应比高者优先(HRN)",IDC_HRN,"Button",BS_AUTORADIOBUTTON,311,13,89,10
+    CONTROL         "时间片轮转调度(RR)",IDC_RR,"Button",BS_AUTORADIOBUTTON,143,28,81,10
+    CONTROL         "优先权调度(PSA)",IDC_PSA,"Button",BS_AUTORADIOBUTTON,229,28,74,10
+    CONTROL         "多级反馈队列调度(DJF)",IDC_DJF,"Button",BS_AUTORADIOBUTTON,311,28,89,10
+    EDITTEXT        IDC_JobName,395,118,74,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NeedTime,396,133,40,12,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "提交作业(&S)",IDC_Submit,347,171,121,18
+    CONTROL         "自动模拟",IDC_SingleChannel,"Button",BS_AUTORADIOBUTTON | WS_GROUP,19,15,47,10
+    CONTROL         "手动模拟",IDC_NultiChannel,"Button",BS_AUTORADIOBUTTON,71,15,47,10
+    PUSHBUTTON      "退出(&Q)",IDCANCEL,404,291,130,18
+    GROUPBOX        "系统选择",IDC_STATIC,4,5,119,26
+    GROUPBOX        "调度算法",IDC_STATIC,131,5,276,39
+    LTEXT           "内存队列",IDC_STATIC,7,34,31,8
+    CONTROL         "List2",IDC_MQueueLIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,7,47,313,73
+    LTEXT           "后备队列",IDC_STATIC,8,129,31,8
+    CONTROL         "List3",IDC_WaitQueueLIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,9,142,310,68
+    LTEXT           "结果查看",IDC_STATIC,9,218,31,8
+    CONTROL         "List4",IDC_ResultQUeueLIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,9,230,386,81
+    GROUPBOX        "作业信息",IDC_STATIC,332,47,150,171
+    LTEXT           "作业名",IDC_STATIC,363,121,24,8
+    LTEXT           "所需时间",IDC_STATIC,357,135,31,8
+    LTEXT           "秒",IDC_STATIC,439,135,9,8
+    PUSHBUTTON      "清除(&C)",IDC_Clear,164,316,69,29
+    PUSHBUTTON      "暂停",IDC_PauseORContinus,404,260,130,18
+    EDITTEXT        IDC_LevelNum,396,149,74,12,ES_AUTOHSCROLL
+    LTEXT           "队列级数",IDC_STATIC,355,151,32,8
+    PUSHBUTTON      "自动生成",IDC_Submit2,348,95,121,18
+    EDITTEXT        IDC_JobName3,394,69,74,12,ES_AUTOHSCROLL
+    LTEXT           "生成个数",IDC_STATIC,353,71,32,8
+    PUSHBUTTON      "存入记录",IDC_Read,93,316,59,29
+    PUSHBUTTON      "读取记录",IDC_Save,18,316,62,29
+    CONTROL         "",IDC_HistoryQueue,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,488,19,190,156
+    PUSHBUTTON      "保存记录",IDC_Save2,509,183,62,29
+    PUSHBUTTON      "读取记录",IDC_Read2,598,183,59,29
+    PUSHBUTTON      "计算平均周转时间及平均带权周转时间",IDOK,404,231,130,18,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "手动控制(&F)",IDC_BUTTON2,565,231,64,32
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "FileDescription", "Job Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Job"
+            VALUE "LegalCopyright", "版权所有 (C) 2008"
+            VALUE "OriginalFilename", "Job.EXE"
+            VALUE "ProductName", "Job 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_JOB_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 678
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 354
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 Job(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Job.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
